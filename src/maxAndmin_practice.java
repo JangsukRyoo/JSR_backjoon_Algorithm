@@ -72,5 +72,17 @@ public class maxAndmin_practice {
 //      }
 //      System.out.println(sum/n*100);
 
+        // OX 문제 #8958
+        int n = sc.nextInt();
+        ArrayList<String> prob = new ArrayList<>();
+        for(int i = 0; i<n; i++){
+
+
+
+
+
+        }
+
+
     }
 }
