@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
@@ -73,16 +74,82 @@ public class maxAndmin_practice {
 //      System.out.println(sum/n*100);
 
         // OX 문제 #8958
+//        int n = sc.nextInt();
+//
+//       String arr[] = new String[n];
+//
+//        for(int i = 0; i<n; i++){
+//        arr[i] = sc.next();
+//        }
+//        sc.close();
+//
+//        for(int i = 0; i < arr.length; i++){
+//            int ct = 0;
+//            int sum = 0;
+//
+//            for(int j =0; j < arr[i].length(); j++){
+//
+//                if(arr[i].charAt(j) =='O'){
+//                    ct++;
+//                }else{
+//                    ct = 0;
+//                }
+//                sum += ct;
+//            }
+//            System.out.println(sum);
+//        }
+
+        // 평균은 넘곘지? #4344
+
         int n = sc.nextInt();
-        ArrayList<String> prob = new ArrayList<>();
-        for(int i = 0; i<n; i++){
+        int arr[];
 
-
-
-
-
+        for (int i = 0; i < n; i++){
+            int num = sc.nextInt();
+            arr = new int[num];
+            double sum = 0;
+            for(int j = 0; j<arr.length; j++) {
+                int val = sc.nextInt();
+                arr[j] = val;
+                sum += val;
+            }
+            double mean = (sum/num);
+            double memct = 0;
+            for(int j =0; j<num; j++){
+                if(arr[j] >mean) {
+                    memct ++;
+                }
+            }
+            System.out.printf("%.3f%%\n",(memct/num)*100);
         }
-
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
