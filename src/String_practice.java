@@ -37,6 +37,21 @@ public class String_practice {
 //            System.out.println(val + " ");
 //        }
 
+        // 문자열 반복 #2675
+//        int n = sc.nextInt();
+//
+//        for (int i=0; i <n; i++){
+//
+//            int num= sc.nextInt();
+//            String s = sc.next();
+//
+//            for(int j =0; j< s.length(); j++){
+//                for(int k =0; k < num; k++){
+//                    System.out.print(s.charAt(j));
+//                }
+//            }
+//            System.out.println();
+//        }
 
 
     }
