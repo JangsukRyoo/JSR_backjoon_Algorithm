@@ -106,25 +106,96 @@ public class String_practice {
 //        }
 
         //다이얼 #5622
-        String str = sc.nextLine();
+//        String str = sc.nextLine();
+//
+//        int sec = 0;
+//        int n = str.length();
+//
+//        for(int i = 0; i < n; i++) {
+//
+//            switch(str.charAt(i)) {
+//                case 'A' : case 'B': case 'C' : sec += 3; break;
+//                case 'D' : case 'E': case 'F' : sec += 4; break;
+//                case 'G' : case 'H': case 'I' : sec += 5; break;
+//                case 'J' : case 'K': case 'L' : sec += 6; break;
+//                case 'M' : case 'N': case 'O' : sec += 7; break;
+//                case 'P' : case 'Q': case 'R' : case 'S' : sec += 8; break;
+//                case 'T' : case 'U': case 'V' : sec += 9; break;
+//                case 'W' : case 'X': case 'Y' : case 'Z' : sec += 10; break;
+//            }
+//        }
+//        System.out.print(sec);
 
-        int sec = 0;
-        int n = str.length();
+        //크로아티아 알파벳 #2941
 
-        for(int i = 0; i < n; i++) {
 
-            switch(str.charAt(i)) {
-                case 'A' : case 'B': case 'C' : sec += 3; break;
-                case 'D' : case 'E': case 'F' : sec += 4; break;
-                case 'G' : case 'H': case 'I' : sec += 5; break;
-                case 'J' : case 'K': case 'L' : sec += 6; break;
-                case 'M' : case 'N': case 'O' : sec += 7; break;
-                case 'P' : case 'Q': case 'R' : case 'S' : sec += 8; break;
-                case 'T' : case 'U': case 'V' : sec += 9; break;
-                case 'W' : case 'X': case 'Y' : case 'Z' : sec += 10; break;
+                String str = sc.nextLine();
+
+                int ct = 0;
+
+                for (int i = 0; i < str.length(); i++) {
+                    char ch = str.charAt(i);
+                    if(ch == 'c') {
+                        if(i < str.length() - 1) {
+                            if(str.charAt(i + 1) == '=') {
+
+                                i++;
+                            }
+                            else if(str.charAt(i + 1) == '-') {
+                                i++;
+                            }
+                        }
+                    }
+                    else if(ch == 'd') {
+                        if(i < str.length() - 1) {
+                            if(str.charAt(i + 1) == 'z') {
+                                if(i < str.length() - 2) {
+                                    if(str.charAt(i + 2) == '=') {
+                                        i += 2;
+                                    }
+                                }
+                            }
+                            else if(str.charAt(i + 1) == '-') {
+                                i++;
+                            }
+                        }
+                    }
+                    else if(ch == 'l') {
+                        if(i < str.length() - 1) {
+                            if(str.charAt(i + 1) == 'j') {
+                                i++;
+                            }
+                        }
+                    }
+                    else if(ch == 'n') {
+                        if(i < str.length() - 1) {
+                            if(str.charAt(i + 1) == 'j') {
+                                i++;
+                            }
+                        }
+                    }
+                    else if(ch == 's') {
+                        if(i < str.length() - 1) {
+                            if(str.charAt(i + 1) == '=') {
+                                i++;
+                            }
+                        }
+                    }
+                    else if(ch == 'z') {
+                        if(i < str.length() - 1) {
+                            if(str.charAt(i + 1) == '=') {
+                                i++;
+                            }
+                        }
+                    }
+                    ct++;
+                }
+                System.out.println(ct);
             }
         }
-        System.out.print(sec);
+
+
+
     }
 }
 
