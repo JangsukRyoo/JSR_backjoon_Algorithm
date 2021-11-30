@@ -138,7 +138,6 @@ public class String_practice {
                     if(ch == 'c') {
                         if(i < str.length() - 1) {
                             if(str.charAt(i + 1) == '=') {
-
                                 i++;
                             }
                             else if(str.charAt(i + 1) == '-') {
