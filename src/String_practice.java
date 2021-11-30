@@ -83,12 +83,27 @@ public class String_practice {
 
         //단어의 개수 # 1152
 
-        String str = sc.nextLine().trim();
+//        String str = sc.nextLine().trim();
+//
+//        if(str.isEmpty()){
+//            System.out.println("0");
+//        } else{
+//            System.out.println(str.split(" ").length);
+//        }
 
-        if(str.isEmpty()){
-            System.out.println("0");
-        } else{
-            System.out.println(str.split(" ").length);
+        //상수 #2908
+
+
+        String reverse1 = new StringBuffer(sc.next()).reverse().toString();
+        String reverse2 = new StringBuffer(sc.next()).reverse().toString();
+
+        int reverint1 = Integer.parseInt(reverse1);
+        int reverint2 = Integer.parseInt(reverse2);
+
+        if (reverint1 <reverint2){
+            System.out.println(reverint2);
+        }else{
+            System.out.println(reverint1);
         }
     }
 }
