@@ -93,18 +93,38 @@ public class String_practice {
 
         //상수 #2908
 
+//        String reverse1 = new StringBuffer(sc.next()).reverse().toString();
+//        String reverse2 = new StringBuffer(sc.next()).reverse().toString();
+//
+//        int reverint1 = Integer.parseInt(reverse1);
+//        int reverint2 = Integer.parseInt(reverse2);
+//
+//        if (reverint1 <reverint2){
+//            System.out.println(reverint2);
+//        }else{
+//            System.out.println(reverint1);
+//        }
 
-        String reverse1 = new StringBuffer(sc.next()).reverse().toString();
-        String reverse2 = new StringBuffer(sc.next()).reverse().toString();
+        //다이얼 #5622
+        String str = sc.nextLine();
 
-        int reverint1 = Integer.parseInt(reverse1);
-        int reverint2 = Integer.parseInt(reverse2);
+        int sec = 0;
+        int n = str.length();
 
-        if (reverint1 <reverint2){
-            System.out.println(reverint2);
-        }else{
-            System.out.println(reverint1);
+        for(int i = 0; i < n; i++) {
+
+            switch(str.charAt(i)) {
+                case 'A' : case 'B': case 'C' : sec += 3; break;
+                case 'D' : case 'E': case 'F' : sec += 4; break;
+                case 'G' : case 'H': case 'I' : sec += 5; break;
+                case 'J' : case 'K': case 'L' : sec += 6; break;
+                case 'M' : case 'N': case 'O' : sec += 7; break;
+                case 'P' : case 'Q': case 'R' : case 'S' : sec += 8; break;
+                case 'T' : case 'U': case 'V' : sec += 9; break;
+                case 'W' : case 'X': case 'Y' : case 'Z' : sec += 10; break;
+            }
         }
+        System.out.print(sec);
     }
 }
 
