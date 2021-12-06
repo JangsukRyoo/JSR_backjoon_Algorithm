@@ -93,18 +93,18 @@ public class for_practice {
 //
 
         //x보다 작은수 #10871
-        int n = sc.nextInt();
-        int les = sc.nextInt();
-        int num[] = new int[n];
-
-        for(int i = 0; i < n; i++){
-            num[i] = sc.nextInt();
-        }
-        sc.close();
-        for(int i =0; i < n; i++){
-            if(num[i] < les){
-                System.out.print(num[i]+" ");
-            }
-        }
+//        int n = sc.nextInt();
+//        int les = sc.nextInt();
+//        int num[] = new int[n];
+//
+//        for(int i = 0; i < n; i++){
+//            num[i] = sc.nextInt();
+//        }
+//        sc.close();
+//        for(int i =0; i < n; i++){
+//            if(num[i] < les){
+//                System.out.print(num[i]+" ");
+//            }
+//        }
     }
 }

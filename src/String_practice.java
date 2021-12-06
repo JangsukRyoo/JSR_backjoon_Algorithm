@@ -4,11 +4,11 @@ public class String_practice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //아스키 코드  #11654
+//        아스키 코드  #11654
 //        int a = sc.next().charAt(0);
 //        System.out.println(a);
-
-        //숫자의 합 #11720
+//
+//        숫자의 합 #11720
 //        int n = sc.nextInt();
 //        String a = sc.next();
 //        int sum = 0;
@@ -17,8 +17,8 @@ public class String_practice {
 //            sum += a.charAt(i)-'0';
 //        }
 //        System.out.println(sum);
-
-        //알파벳 찾기 #10809
+//
+//        알파벳 찾기 #10809
 //        int[] arr = new int[26];
 //        String a = sc.nextLine();
 //
@@ -36,8 +36,8 @@ public class String_practice {
 //        for(int val : arr){
 //            System.out.println(val + " ");
 //        }
-
-        // 문자열 반복 #2675
+//
+//         문자열 반복 #2675
 //        int n = sc.nextInt();
 //
 //        for (int i=0; i <n; i++){
@@ -52,8 +52,8 @@ public class String_practice {
 //            }
 //            System.out.println();
 //        }
-
-        // 단어공부 #1157
+//
+//         단어공부 #1157
 //        int[] arr = new int[26];
 //        String s = sc.next();
 //
@@ -80,9 +80,9 @@ public class String_practice {
 //        }
 //        System.out.print(ch);
 //    }
-
-        //단어의 개수 # 1152
-
+//
+//        단어의 개수 # 1152
+//
 //        String str = sc.nextLine().trim();
 //
 //        if(str.isEmpty()){
@@ -90,9 +90,9 @@ public class String_practice {
 //        } else{
 //            System.out.println(str.split(" ").length);
 //        }
-
-        //상수 #2908
-
+//
+//        상수 #2908
+//
 //        String reverse1 = new StringBuffer(sc.next()).reverse().toString();
 //        String reverse2 = new StringBuffer(sc.next()).reverse().toString();
 //
@@ -104,8 +104,8 @@ public class String_practice {
 //        }else{
 //            System.out.println(reverint1);
 //        }
-
-        //다이얼 #5622
+//
+//        다이얼 #5622
 //        String str = sc.nextLine();
 //
 //        int sec = 0;
@@ -125,8 +125,8 @@ public class String_practice {
 //            }
 //        }
 //        System.out.print(sec);
-
-        //크로아티아 알파벳 #2941
+//
+//        크로아티아 알파벳 #2941
 //                String str = sc.nextLine();
 //
 //                int ct = 0;
@@ -189,6 +189,39 @@ public class String_practice {
 //                }
 //                System.out.println(ct);
 
+//      단어 체커 # 1316
+
+        int count = 0;
+        int N = sc.nextInt();
+        for (int i = 0; i < N; i++) {
+            if (check() == true) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+    public static boolean check() {
+        Scanner sc = new Scanner(System.in);
+        boolean[] check = new boolean[26];
+        int prev = 0;
+        String str = sc.next();
+
+        for(int i = 0; i < str.length(); i++) {
+            int now = str.charAt(i);
+            if (prev != now) {
+                if ( check[now - 'a'] == false ) {
+                   check[now - 'a'] = true;
+                    prev = now;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                continue;
+            }
+        }
+        return true;
     }
 }
 
