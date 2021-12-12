@@ -74,7 +74,7 @@ public class If_Practice {
             System.out.println(hr + " " + (min -45));
         }
 
-        int time = sc.nextInt()
+        int time = sc.nextInt();
     }
 }
 
