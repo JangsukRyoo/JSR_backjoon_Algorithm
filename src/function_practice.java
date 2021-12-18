@@ -49,7 +49,6 @@ public class function_practice {
                 System.out.print(arithmetic_sequence(in.nextInt()));
                 in.close();
             }
-
      public static int arithmetic_sequence(int num) {
         int ct = 0;
         if (num < 100) {
