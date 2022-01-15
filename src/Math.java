@@ -36,10 +36,10 @@ public class Math {
 //        }
 
         // #1193
-        int X = sc.nextInt();
-
-        int crossCt = 1;
-        int prev_sum = 0;
+//        int X = sc.nextInt();
+//
+//        int crossCt = 1;
+//        int prev_sum = 0;
 
 //        while (true) {
 //
@@ -74,22 +74,48 @@ public class Math {
 
 //       #10250
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int testcase = Integer.parseInt(br.readLine());
-        for(int i=0; i<testcase; i++)
-        {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            int height = Integer.parseInt(st.nextToken());
-            int width = Integer.parseInt(st.nextToken());
-            int nth = Integer.parseInt(st.nextToken());
-            int floor =  nth % height  , room = nth/height;
-            if ( floor == 0 ) {
-                System.out.println(height*100+room);
-            }
-            else {
-                System.out.println(floor*100+room+1);
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int testcase = Integer.parseInt(br.readLine());
+//        for(int i=0; i<testcase; i++)
+//        {
+//            StringTokenizer st = new StringTokenizer(br.readLine());
+//            int height = Integer.parseInt(st.nextToken());
+//            int width = Integer.parseInt(st.nextToken());
+//            int nth = Integer.parseInt(st.nextToken());
+//            int floor =  nth % height  , room = nth/height;
+//            if ( floor == 0 ) {
+//                System.out.println(height*100+room);
+//            }
+//            else {
+//                System.out.println(floor*100+room+1);
+//            }
+//        }
+
+//      #2775
+
+        int testCase = sc.nextInt();
+        int[][] apt = new int[15][15];
+
+        apt[0][0] =1;
+
+        for( int i =0; i<apt.length; i++){
+            apt[0][i] = i+1;
+            apt[i][0] = 1;
+        }
+
+        for(int i =1 ; i<apt.length; i++){
+            for(int j =1; j < apt.length; j++){
+                apt[i][j] = apt[i-1][j] + apt[i][j-1];
             }
         }
 
-    }
+        while(testCase -- > 0){
+            int floor = sc.nextInt();
+            int roomNum = sc.nextInt();
+            System.out.println(apt[floor][roomNum-1]);
+
+        }
+
+
+   }
 }
