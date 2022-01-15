@@ -1,7 +1,11 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Math {
-    public static void main(String args[]){
+    public static void main(String args[]) throws IOException {
 
         Scanner sc = new Scanner(System.in);
 
@@ -58,14 +62,34 @@ public class Math {
 
  //       #2869
 
-        int up = in.nextInt();
-        int down = in.nextInt();
-        int length = in.nextInt();
+//        int up = sc.nextInt();
+//        int down = sc.nextInt();
+//        int length = sc.nextInt();
+//
+//        int day = (length - down) / (up - down);
+//        if ((length - down) % (up - down) != 0) {
+//            day++;
+//        }
+//        System.out.println(day);
 
-        int day = (length - down) / (up - down);
-        if ((length - down) % (up - down) != 0) {
-            day++;
+//       #10250
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int testcase = Integer.parseInt(br.readLine());
+        for(int i=0; i<testcase; i++)
+        {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int height = Integer.parseInt(st.nextToken());
+            int width = Integer.parseInt(st.nextToken());
+            int nth = Integer.parseInt(st.nextToken());
+            int floor =  nth % height  , room = nth/height;
+            if ( floor == 0 ) {
+                System.out.println(height*100+room);
+            }
+            else {
+                System.out.println(floor*100+room+1);
+            }
         }
-        System.out.println(day);
+
     }
 }
