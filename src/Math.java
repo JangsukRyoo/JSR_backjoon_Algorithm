@@ -37,22 +37,35 @@ public class Math {
         int crossCt = 1;
         int prev_sum = 0;
 
-        while (true) {
+//        while (true) {
+//
+//            if (X <= prev_sum + crossCt) {
+//
+//                if (crossCt % 2 == 1) {
+//                    System.out.print((crossCt - (X - prev_sum - 1)) + "/" + (X - prev_sum));
+//                    break;
+//                }
+//                else {
+//                    System.out.print((X - prev_sum) + "/" + (crossCt - (X - prev_sum - 1)));
+//                    break;
+//                }
+//            } else {
+//                prev_sum += crossCt;
+//                crossCt++;
+//            }
+//        }
 
-            if (X <= prev_sum + crossCt) {
 
-                if (crossCt % 2 == 1) {
-                    System.out.print((crossCt - (X - prev_sum - 1)) + "/" + (X - prev_sum));
-                    break;
-                }
-                else {
-                    System.out.print((X - prev_sum) + "/" + (crossCt - (X - prev_sum - 1)));
-                    break;
-                }
-            } else {
-                prev_sum += crossCt;
-                crossCt++;
-            }
+ //       #2869
+
+        int up = in.nextInt();
+        int down = in.nextInt();
+        int length = in.nextInt();
+
+        int day = (length - down) / (up - down);
+        if ((length - down) % (up - down) != 0) {
+            day++;
         }
+        System.out.println(day);
     }
 }
