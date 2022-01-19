@@ -118,21 +118,53 @@ public class Math {
 
         //#2839
 
-        int ct = sc.nextInt();
+//        int ct = sc.nextInt();
+//
+//
+//        if (ct == 4 || ct == 7) {
+//            System.out.println(-1);
+//        }
+//        else if (ct % 5 == 0) {
+//            System.out.println(ct / 5);
+//        }
+//        else if (ct % 5 == 1 || ct % 5 == 3) {
+//            System.out.println((ct / 5) + 1);
+//        }
+//        else if (ct % 5 == 2 || ct % 5 == 4) {
+//            System.out.println((ct / 5) + 2);
+//        }
 
+        // 10757
+        String str_A = sc.next();
+        String str_B = sc.next();
 
-        if (ct == 4 || ct == 7) {
-            System.out.println(-1);
-        }
-        else if (ct % 5 == 0) {
-            System.out.println(ct / 5);
-        }
-        else if (ct % 5 == 1 || ct % 5 == 3) {
-            System.out.println((ct / 5) + 1);
-        }
-        else if (ct % 5 == 2 || ct % 5 == 4) {
-            System.out.println((ct / 5) + 2);
+        int max_length = Math.max(str_A.length(), str_B.length());
+        
+        int[] A = new int[max_length + 1];
+        int[] B = new int[max_length + 1];
+
+        for(int i = str_A.length() - 1, idx = 0; i >= 0; i--, idx++) {
+            A[idx] = str_A.charAt(i) - '0';
         }
 
+        for(int i = str_B.length() - 1, idx = 0; i >= 0; i--, idx++) {
+            B[idx] = str_B.charAt(i) - '0';
+        }
+
+        for(int i = 0; i < max_length; i++) {
+            int value = A[i] + B[i];
+            A[i] = value % 10;
+            A[i + 1] += (value / 10);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        if(A[max_length] != 0) {
+            sb.append(A[max_length]);
+        }
+        for(int i = max_length - 1; i >= 0; i--) {
+            sb.append(A[i]);
+        }
+
+        System.out.println(sb);
    }
 }
