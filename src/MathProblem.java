@@ -37,7 +37,6 @@ public class MathProblem {
 
         // #1193
 //        int X = sc.nextInt();
-//
 //        int crossCt = 1;
 //        int prev_sum = 0;
 
@@ -120,7 +119,6 @@ public class MathProblem {
 
 //        int ct = sc.nextInt();
 //
-//
 //        if (ct == 4 || ct == 7) {
 //            System.out.println(-1);
 //        }
@@ -164,22 +162,18 @@ public class MathProblem {
 //        for(int i = max_length - 1; i >= 0; i--) {
 //            sb.append(A[i]);
 //        }
-//
 //        System.out.println(sb);
 
 
 //         1011 Math 마지막
 
-
-        int ct = sc.nextInt();	// 테스트 케이스
+        int ct = sc.nextInt();
 
         for(int i = 0; i < ct; i++) {
-
             int X = sc.nextInt();
             int Y = sc.nextInt();
 
             int distance = Y - X;
-
             int max = (int)Math.sqrt(distance);
 
             if(max == Math.sqrt(distance)) {
@@ -191,7 +185,6 @@ public class MathProblem {
             else {
                 System.out.println(max * 2 + 1);
             }
-
         }
    }
 }
