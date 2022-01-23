@@ -15,14 +15,6 @@ public class Test {
         }catch (SecurityException e4){
             System.out.println("exception 4");
         }
-
-
-
-
-
-
-
-
     }
 }
 
