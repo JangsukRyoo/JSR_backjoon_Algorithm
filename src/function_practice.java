@@ -43,7 +43,6 @@ public class function_practice {
 //        return sum;
 
  //       한수 #1065
-
                 Scanner in = new Scanner(System.in);
 
                 System.out.print(arithmetic_sequence(in.nextInt()));

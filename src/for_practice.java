@@ -91,7 +91,6 @@ public class for_practice {
 //            System.out.println();
 //        }
 //
-
         //x보다 작은수 #10871
 //        int n = sc.nextInt();
 //        int les = sc.nextInt();

@@ -11,20 +11,16 @@ public class JSR_Report {
 
         switch (select){
             case 1 :
-                System.out.println(jsr.show("유장석"));
-
-                break;
+                System.out.println(jsr.show("유장석")); break;
+                
             case 2 :
-                System.out.println( jsr.show("유장석", "jangsukr@gmail.com"));
+                System.out.println( jsr.show("유장석", "jangsukr@gmail.com")); break;
 
-                break;
             case 3 :
-                System.out.println( jsr.show("유장석", "jangsukr@gmail.com", "19920703"));
+                System.out.println( jsr.show("유장석", "jangsukr@gmail.com", "19920703")); break;
 
-                break;
             default:
-                System.out.println("숫자를 잘못입력 하셨습니다.");
-                break;
+                System.out.println("숫자를 잘못입력 하셨습니다."); break;
         }
     }
 }
