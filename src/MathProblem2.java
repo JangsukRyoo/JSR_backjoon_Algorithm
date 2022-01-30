@@ -77,32 +77,44 @@ public class MathProblem2 {
         // 2보다  큰 짝수가 주어질 때 소수의 합을 구한다.
         // 소수의 합이 여러개일 경우 두 소수의 차이가 작은 것을 출력한다
         // 두 개으 소수를 출력 할 때 작은 소수 부터 출력한다.
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        get_prime();
-        int T = Integer.parseInt(br.readLine());
-        while (T-- > 0){
-            int n = Integer.parseInt(br.readLine());
-            int first = n/2;
-            int second = n/2;
-            if (!prime[first] && !prime[second]) {
-                System.out.println(first + " " + second);
-                break;
-            }
-            first--;
-            second++;
-        }
-    }
-    public static void get_prime() {
-        prime[0] = prime[1] = true;
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        get_prime();
+//        int T = Integer.parseInt(br.readLine());
+//        while (T-- > 0){
+//            int n = Integer.parseInt(br.readLine());
+//            int first = n/2;
+//            int second = n/2;
+//            if (!prime[first] && !prime[second]) {
+//                System.out.println(first + " " + second);
+//                break;
+//            }
+//            first--;
+//            second++;
 
-        for (int i = 2; i <= Math.sqrt(prime.length); i++) {
-            if (prime[i])
-                continue;
-            for (int j = i * i; j < prime.length; j += i) {
-                prime[j] = true;
-            }
-        }
-    }
+//      #1085
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+        int w = sc.nextInt();
+        int h = sc.nextInt();
 
-    public static boolean[] prim = new boolean[10001];
+        int x_min = Math.min(x, w-x);
+        int y_min = Math.min(y, h-y);
+
+        System.out.println(Math.min(x_min, y_min);
+       }
+    }
+    // 9020 같은것
+//    public static void get_prime() {
+//        prime[0] = prime[1] = true;
+//
+//        for (int i = 2; i <= Math.sqrt(prime.length); i++) {
+//            if (prime[i])
+//                continue;
+//            for (int j = i * i; j < prime.length; j += i) {
+//                prime[j] = true;
+//            }
+//        }
+//    }
+//
+//    public static boolean[] prim = new boolean[10001];
 }
