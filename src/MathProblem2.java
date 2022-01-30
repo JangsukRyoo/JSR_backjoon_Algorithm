@@ -92,15 +92,15 @@ public class MathProblem2 {
 //            second++;
 
 //      #1085
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        int w = sc.nextInt();
-        int h = sc.nextInt();
-
-        int x_min = Math.min(x, w-x);
-        int y_min = Math.min(y, h-y);
-
-        System.out.println(Math.min(x_min, y_min);
+//        int x = sc.nextInt();
+//        int y = sc.nextInt();
+//        int w = sc.nextInt();
+//        int h = sc.nextInt();
+//
+//        int x_min = Math.min(x, w-x);
+//        int y_min = Math.min(y, h-y);
+//
+//        System.out.println(Math.min(x_min, y_min);
        }
     }
     // 9020 같은것
