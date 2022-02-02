@@ -101,6 +101,9 @@ public class MathProblem2 {
 //        int y_min = Math.min(y, h-y);
 //
 //        System.out.println(Math.min(x_min, y_min);
+
+
+
        }
     }
     // 9020 같은것
@@ -118,3 +121,5 @@ public class MathProblem2 {
 //
 //    public static boolean[] prim = new boolean[10001];
 }
+        }
+        }
