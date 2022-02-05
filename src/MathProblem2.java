@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class MathProblem2 {
     public static boolean prime[];
+
     public static void main(String args[]) throws IOException {
 
         Scanner sc = new Scanner(System.in);
@@ -103,26 +104,50 @@ public class MathProblem2 {
 //        System.out.println(Math.min(x_min, y_min);
 
 //      #3009
+//
+//        int[][] arr = new int[3][2];;
+//        int x=0, y=0;
+//
+//        for(int i=0;i<3;i++) {
+//            arr[i][0] = sc.nextInt();
+//            arr[i][1] = sc.nextInt();
+//        }
+//
+//        if(arr[0][0] == arr[1][0]) x = arr[2][0];
+//        else if(arr[0][0] == arr[2][0]) x = arr[1][0];
+//        else if(arr[1][0] == arr[2][0]) x = arr[0][0];
+//
+//        if(arr[0][1] == arr[1][1]) y = arr[2][1];
+//        else if(arr[0][1] == arr[2][1]) y = arr[1][1];
+//        else if(arr[1][1] == arr[2][1]) y = arr[0][1];
+//
+//        System.out.println(x + " " + y);
+//
+//
+//        #4153
 
-        int[][] arr = new int[3][2];;
-        int x=0, y=0;
+        while (true) {
 
-        for(int i=0;i<3;i++) {
-            arr[i][0] = sc.nextInt();
-            arr[i][1] = sc.nextInt();
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            int z = sc.nextInt();
+
+            if (x == 0 && y == 0 && z == 0) break;
+
+            if ((x * x + y * y) == z * z) {
+                System.out.println("right");
+            } else if (x * x == (y * y + z * z)) {
+                System.out.println("right");
+            } else if (y * y == (z * z + x * x)) {
+                System.out.println("right");
+            } else {
+                System.out.println("wrong");
+            }
+
         }
-
-        if(arr[0][0] == arr[1][0]) x = arr[2][0];
-        else if(arr[0][0] == arr[2][0]) x = arr[1][0];
-        else if(arr[1][0] == arr[2][0]) x = arr[0][0];
-
-        if(arr[0][1] == arr[1][1]) y = arr[2][1];
-        else if(arr[0][1] == arr[2][1]) y = arr[1][1];
-        else if(arr[1][1] == arr[2][1]) y = arr[0][1];
-
-        System.out.println(x + " " + y);
     }
 }
+
     // 9020 같은것
 //    public static void get_prime() {
 //        prime[0] = prime[1] = true;
