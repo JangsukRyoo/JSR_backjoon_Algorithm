@@ -145,6 +145,16 @@ public class MathProblem2 {
 //            }
 //
 //        }
+
+
+//        #3053
+
+        double R = sc.nextDouble();
+        sc.close();
+
+        System.out.println(R * R * Math.PI);
+        System.out.println(2 * R * R);
+
     }
 }
 
