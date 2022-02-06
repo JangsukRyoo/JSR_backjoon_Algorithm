@@ -148,13 +148,50 @@ public class MathProblem2 {
 
 
 //        #3053
+//
+//        double R = sc.nextDouble();
+//        sc.close();
+//
+//        System.out.println(R * R * Math.PI);
+//        System.out.println(2 * R * R);
 
-        double R = sc.nextDouble();
-        sc.close();
+//        #1002 터렛
+        int T = sc.nextInt();
 
-        System.out.println(R * R * Math.PI);
-        System.out.println(2 * R * R);
+        while (T-- > 0) {
 
+            int x1 = sc.nextInt();
+            int y1 = sc.nextInt();
+            int r1 = sc.nextInt();
+
+            int x2 = sc.nextInt();
+            int y2 = sc.nextInt();
+            int r2 = sc.nextInt();
+
+            System.out.println(tangent(x1, y1, r1, x2, y2, r2));
+        }
+    }
+
+    public static int tangent(int x1, int y1, int r1, int x2, int y2, int r2) {
+
+        int distance_pow = (int) (Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+        if (x1 == x2 && y1 == y2 && r1 == r2) {
+            return -1;
+        } else if (distance_pow > Math.pow(r1 + r2, 2)) {
+            return 0;
+        } else if (distance_pow < Math.pow(r2 - r1, 2)) {
+            return 0;
+        } else if (distance_pow == Math.pow(r2 - r1, 2)) {
+            return 1;
+        } else if (distance_pow == Math.pow(r1 + r2, 2)) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+
+}
     }
 }
 
