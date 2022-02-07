@@ -192,8 +192,7 @@ public class MathProblem2 {
     }
 
 }
-    }
-}
+
 
     // 9020 같은것
 //    public static void get_prime() {
@@ -209,5 +208,5 @@ public class MathProblem2 {
 //    }
 //
 //  public static boolean[] prim = new boolean[10001];
-₩
+
 
