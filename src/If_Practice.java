@@ -60,21 +60,63 @@ public class If_Practice {
 //        }
 
         // 알람 시계 #2884
-        int hr = sc.nextInt();
-        int min = sc.nextInt();
+//        int hr = sc.nextInt();
+//        int min = sc.nextInt();
+//
+//        if(min < 45){
+//            hr --;
+//            min = 60 - (45 - min);
+//            if(hr < 0){
+//                hr = 23;
+//            }
+//            System.out.println(hr + " " + min);
+//        }else{
+//            System.out.println(hr + " " + (min -45));
+//        }
+//
+//        int time = sc.nextInt();
 
-        if(min < 45){
-            hr --;
-            min = 60 - (45 - min);
-            if(hr < 0){
-                hr = 23;
-            }
-            System.out.println(hr + " " + min);
-        }else{
-            System.out.println(hr + " " + (min -45));
+
+    }
+    public static double calTime = 0.0;
+
+    public double solution(double C, double F, double X) {
+        int ab = 0;
+        double answer = 0.0;
+        double soloT = 0,0;
+        double albaT = 0.0;
+        double total = 0.0;
+
+        soloT = getSoloT(C);
+
+        calTime = soloT;
+        total = getAlbaTime(C,F,X,ab);
+
+
+        return answer;
+    }
+
+    public double getAlbaTime(double C, double F, double X, int ab){
+        System.out.println();
+        double abTime = 0.0;
+        double getXTime = 0.0;
+        double getTotal = 0.0;
+
+        for(int i = 0; i< ab; i++){
+            abTime += C/(2 + (F*i));
         }
 
-        int time = sc.nextInt();
+        getXTime = X/(2+(F*ab));
+        getTotal = abTime+getXTime;
+
+        return getTotal;
+    }
+
+    public double getSoloT(double X){
+        double soloT = 0.0;
+        soloT = X / 2;
+
+        return soloT;
     }
 }
 
