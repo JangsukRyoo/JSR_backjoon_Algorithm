@@ -192,8 +192,6 @@ public class MathProblem2 {
     }
 
 }
-
-
     // 9020 같은것
 //    public static void get_prime() {
 //        prime[0] = prime[1] = true;
