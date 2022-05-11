@@ -83,7 +83,7 @@ public class If_Practice {
     public double solution(double C, double F, double X) {
         int ab = 0;
         double answer = 0.0;
-        double soloT = 0,0;
+        double soloT = 0.0;
         double albaT = 0.0;
         double total = 0.0;
 
