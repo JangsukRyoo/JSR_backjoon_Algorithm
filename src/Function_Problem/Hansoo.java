@@ -1,4 +1,4 @@
-package Function_Practice;
+package Function_Problem;
 
 import java.util.Scanner;
 

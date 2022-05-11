@@ -1,4 +1,4 @@
-package Function_Practice;
+package Function_Problem;
 
 public class Sum {
     //#15596 정수의 합
