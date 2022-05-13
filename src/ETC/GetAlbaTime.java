@@ -1,3 +1,5 @@
+package ETC;
+
 public class GetAlbaTime {
 
     public static void main(String args[]){
