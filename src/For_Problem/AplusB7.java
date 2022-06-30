@@ -10,7 +10,7 @@ public class AplusB7 {
         for (int i = 1;  i <= n ; i++) {
             int a = sc.nextInt();
             int b = sc.nextInt();
-            System.out.println("Case #"+i+":" +(a+b));
+            System.out.println("Case #"+i+":" +(a+b))
         }
     }
 }
