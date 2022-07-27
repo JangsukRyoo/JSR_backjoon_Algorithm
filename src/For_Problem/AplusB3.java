@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class AplusB3 {
     public static void main(String args[]) throws Exception {
         // A+B -3 # 10950
-
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         for(int i = 1; i <= t; i++){
