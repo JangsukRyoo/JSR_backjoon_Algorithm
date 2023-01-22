@@ -2,6 +2,7 @@ package For_Problem;
 
 import java.util.*;
 
+//인공 지능 시계2530
 public class AI_CLOCK {
     public static void main(String args[]) throws Exception {
 
